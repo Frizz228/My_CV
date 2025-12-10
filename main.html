@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivan Tulin - Web Developer CV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .cv-container {
+            max-width: 1000px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #4a6491 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: #ecf0f1;
+        }
+        
+        .profile-image {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            margin: 0 auto 20px;
+            background-color: #34495e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+        }
+        
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 0;
+        }
+        
+        .sidebar {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-right: 1px solid #eee;
+        }
+        
+        .main-content {
+            padding: 30px;
+        }
+        
+        h3 {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+            display: flex;
+            align-items: center;
+        }
+        
+        h3 i {
+            margin-right: 10px;
+            color: #3498db;
+        }
+        
+        .contact-info p {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-info i {
+            width: 20px;
+            margin-right: 12px;
+            color: #3498db;
+        }
+        
+        .skills-list {
+            list-style: none;
+        }
+        
+        .skills-list li {
+            background-color: #e8f4fc;
+            margin-bottom: 10px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+            display: flex;
+            align-items: center;
+        }
+        
+        .skills-list li i {
+            margin-right: 10px;
+            color: #3498db;
+        }
+        
+        .experience-item, .education-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #eee;
+        }
+        
+        .experience-item:last-child, .education-item:last-child {
+            border-bottom: none;
+        }
+        
+        .company {
+            font-size: 1.2rem;
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .role {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 8px;
+        }
+        
+        .description {
+            color: #555;
+        }
+        
+        .education-item p {
+            margin-bottom: 5px;
+        }
+        
+        .degree {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .university {
+            color: #3498db;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .print-button {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .print-button:hover {
+            background-color: #2980b9;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media print {
+            .print-button {
+                display: none;
+            }
+            
+            .cv-container {
+                box-shadow: none;
+                margin: 0;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <header>
+            <div class="profile-image">
+                <i class="fas fa-user"></i>
+            </div>
+            <h1>Ivan Tulin</h1>
+            <h2>Web Developer</h2>
+        </header>
+        
+        <div class="content">
+            <aside class="sidebar">
+                <section class="contact-info">
+                    <h3><i class="fas fa-address-book"></i> Contacts</h3>
+                    <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +371 20090029</p>
+                    <p><i class="fas fa-envelope"></i> <strong>Email:</strong> ivanstulins228@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Riga, Latvia</p>
+                </section>
+                
+                <section class="skills">
+                    <h3><i class="fas fa-code"></i> Skills</h3>
+                    <ul class="skills-list">
+                        <li><i class="fab fa-html5"></i> HTML & CSS</li>
+                        <li><i class="fas fa-cogs"></i> C++</li>
+                        <li><i class="fab fa-python"></i> Python</li>
+                        <li><i class="fas fa-laptop-code"></i> Web Development</li>
+                        <li><i class="fas fa-database"></i> Database Management</li>
+                    </ul>
+                </section>
+                
+                <section class="languages">
+                    <h3><i class="fas fa-language"></i> Languages</h3>
+                    <ul class="skills-list">
+                        <li>Latvian (Fluent)
+                        <li>English (Fluent)</li>
+                        <li>Russian (Native)
+                    </ul>
+                </section>
+            </aside>
+            
+            <main class="main-content">
+                <section class="experience">
+                    <h3><i class="fas fa-briefcase"></i> Experience</h3>
+                    <div class="experience-item">
+                        <div class="company">Company "Biolika"</div>
+                        <div class="role">Web Development Assistant</div>
+                        <div class="description">Assisted in the creation and maintenance of company websites, implemented responsive design features, and contributed to front-end development projects. Collaborated with team members to improve website functionality and user experience.</div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="company">Freelance Projects</div>
+                        <div class="role">Web Developer</div>
+                        <div class="description">Developed and deployed various websites for small businesses and personal portfolios. Focused on clean code, responsive design, and optimal performance across devices.</div>
+                    </div>
+                </section>
+                
+                <section class="education">
+                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                    <div class="education-item">
+                        <p class="university">RNU</p>
+                        <p class="degree">Programmer</p>
+                        <p class="description">Completed comprehensive programming coursework with focus on software development principles, algorithms, data structures, and web technologies.</p>
+                    </div>
+                </section>
+                
+                <section class="about">
+                    <h3><i class="fas fa-user"></i> About Me</h3>
+                    <p>Passionate web developer with experience in creating functional and visually appealing websites. Skilled in HTML, CSS, Python, and C++. Always eager to learn new technologies and improve existing skills. Committed to writing clean, efficient code and creating seamless user experiences.</p>
+                </section>
+                
+                <button class="print-button" onclick="window.print()">
+                    <i class="fas fa-print"></i> Print CV / Save as PDF
+                </button>
+            </main>
+        </div>
+        
+        <footer>
+            <p>© 2023 Ivan Tulin | Web Developer | Portfolio: Coming Soon</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Simple script for enhancing interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click effect to print button
+            const printButton = document.querySelector('.print-button');
+            if (printButton) {
+                printButton.addEventListener('click', function() {
+                    this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparing for print...';
+                    setTimeout(() => {
+                        this.innerHTML = '<i class="fas fa-print"></i> Print CV / Save as PDF';
+                    }, 1500);
+                });
+            }
+            
+            // Add subtle animation to skill items
+            const skillItems = document.querySelectorAll('.skills-list li');
+            skillItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateX(5px)';
+                    this.style.transition = 'transform 0.2s ease';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateX(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
